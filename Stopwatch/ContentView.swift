@@ -10,7 +10,55 @@ import SwiftUI
 
 struct ContentView : View {
     var body: some View {
-        Text("Hello World")
+        VStack{
+            VStack{
+                Text("00:00.00")
+                    .fontWeight(.light)
+    
+                .font(.system(size: 80))
+            }.padding([.leading, .trailing], 10)
+             .padding([.top, .bottom], 100)
+            
+            HStack{
+                Button(action: {
+                    
+                }) {
+                    ZStack{
+                        
+                        Circle()
+                            .aspectRatio(contentMode: ContentMode.fit)
+                        Text("Lap")
+                            .color(.white)
+                        
+                    }.padding(5)
+                        .background(Color.red)
+                        .clipShape(Circle())
+    
+                }
+                Spacer()
+                Button(action: {
+                    
+                }) {
+                    ZStack{
+                        
+                        Circle()
+                            .aspectRatio(contentMode: ContentMode.fit)
+                        
+                        Text("Start")
+                            .color(.white)
+                        
+                        }.padding(5)
+                        .background(Color.red)
+                        .clipShape(Circle())
+                }
+                
+            }.padding(60)
+            
+            List{
+                Text("Lap 1")
+            }
+            
+        }
     }
 }
 
